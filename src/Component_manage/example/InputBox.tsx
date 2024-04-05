@@ -4,7 +4,7 @@ interface Props {
     label: string;
     type: 'text' | 'password';
     placeholder: string;
-    buttonTitle: string;
+    buttonTitle?: string;
 }
 
 export default function InputBox({label, type, placeholder, buttonTitle}:Props) {
