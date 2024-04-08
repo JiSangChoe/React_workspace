@@ -9,6 +9,7 @@ import ConditionalRendering from './Component_manage/ConditionalRendering';
 import ListRendering from './Component_manage/ListRendering';
 import SignUpContainer from './Component_manage/example/SignUpContainer';
 import EventComponent from './interaction/EventComponent';
+import StateComponent from './interaction/StateComponent';
 
 // JSX / TSX : 
 // JSX (JavaScript XML) / TSX (TypeScript XML)
@@ -83,7 +84,8 @@ function App() {
       {/* <Properties /> */}
       {/* <ConditionalRendering/> */}
       {/* <ListRendering /> */}
-      <EventComponent />
+      {/* <EventComponent /> */}
+      <StateComponent />
     </>
   );
 }
