@@ -5,9 +5,10 @@ import Sample from './component/Sample';
 import SignInContainer1 from './component/example/SignInContainer';
 import CurlyBraces from './component/CurlyBraces';
 import Properties from './Component_manage/Properties';
-import SignInContainer from './Component_manage/example/SignInContainer';
 import ConditionalRendering from './Component_manage/ConditionalRendering';
 import ListRendering from './Component_manage/ListRendering';
+import SignUpContainer from './Component_manage/example/SignUpContainer';
+import EventComponent from './interaction/EventComponent';
 
 // JSX / TSX : 
 // JSX (JavaScript XML) / TSX (TypeScript XML)
@@ -77,11 +78,12 @@ function App() {
       <FunctionComponent/> */}
       {/* <Component/>
       <Sample/> */}
-      <SignInContainer />
+      {/* <SignUpContainer /> */}
       {/* <CurlyBraces /> */}
       {/* <Properties /> */}
       {/* <ConditionalRendering/> */}
       {/* <ListRendering /> */}
+      <EventComponent />
     </>
   );
 }
