@@ -1,5 +1,9 @@
-import React, { useState } from 'react'
+import React, { ChangeEvent, useState } from 'react'
 import './style.css';
+
+import SignInBackground from 'assets/image/sign-in-background.png';
+import SignUpBackground from 'assets/image/sign-up-background.png';
+import InputBox from 'components/Inputbox';
 
 // 타입을 만든거임
 type AuthPage = 'sign-in' | 'sign-up';
@@ -10,13 +14,30 @@ interface Props {
 
 function SignIn ({onLinkClickHandler}: Props) {
 
-    const onSignInButtonClickHandler = () => {
+    // 사용은 부모에서 변경은 자식에서 함
+    const [id, setId] = useState<string>('');
+    const [password, setPassword] = useState<string>('');
 
+    const onIdChangeHandler = (event: ChangeEvent<HTMLInputElement>) => {
+        setId(event.target.value);
+    };
+
+    const onPasswordChangeHandler = (event: ChangeEvent<HTMLInputElement>) => {
+        setPassword(event.target.value);
+    };
+
+    const onSignInButtonClickHandler = () => {
+        alert(`아이디 :  ${id}/ 비밀번호 : ${password}` );
+        setId('');
+        setPassword('');
     };
 
     return (
         <div className='authentication-contents'>
-            <div className='authentication-input-container'></div>
+            <div className='authentication-input-container'>
+                <InputBox label="아이디" type="text" value={id} placeholder="아이디를 입력해주세요." onChangeHandler={onIdChangeHandler} />
+                <InputBox label="비밀번호" type="password" value={password} placeholder= "비밀번호를 입력해주세요." onChangeHandler={onPasswordChangeHandler}/>
+            </div>
             <div className='authentication-button-container'>
                 <div className='primary-button full-width' onClick={onSignInButtonClickHandler}>로그인</div>
                 <div className='text-link' onClick={onLinkClickHandler}>회원가입</div>
@@ -59,9 +80,13 @@ export default function Authentication() {
     const AuthenticationContents = page === 'sign-in' ? 
     <SignIn onLinkClickHandler={onLinkClickHandler}/> : <SignUp onLinkClickHandler={onLinkClickHandler} />;
 
+    const imageBosStyle = {
+        backgroundImage: `url(${page === "sign-in" ? SignInBackground : SignUpBackground})`,
+    };
+
     return (
         <div id="authentication-wrapper">
-            <div className="authentication-image-box"></div>
+            <div className="authentication-image-box" style={imageBosStyle}></div>
             <div className="authentication-box">
                 <div className="authentication-container">
                     <div className="authentication-title h1">
