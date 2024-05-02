@@ -49,7 +49,7 @@ export default function HookComponent1() {
         // console.log('useEffect');
     });
 
-    // 스코프할 상태 배열에 상캐를 지정하면 지정한 상태가 변경될 때마다 실행됨
+    // 스코프할 상태 배열에 상태를 지정하면 지정한 상태가 변경될 때마다 실행됨
     useEffect(() => {
         // 스코프할 상태 배열에 지정한 상태를 해당 effect에서 변경하면 무한 실행됨
         // setCount(count +1);
@@ -59,7 +59,7 @@ export default function HookComponent1() {
     }, [count]);
 
     // flag는 이밑에 함수만 스코프하고 있음
-    // 스코프할 상태 배열에 두개 이상의 상태를 지정핧 수 있음 (배열에 포함된 상태 중 하나라도 변경되면 effect 가 실행됨)
+    // 스코프할 상태 배열에 두개 이상의 상태를 지정할 수 있음 (배열에 포함된 상태 중 하나라도 변경되면 effect 가 실행됨)
     useEffect(() => {
         // console.log('count 또는 flag가 변경됨');
         // console.log(count);
