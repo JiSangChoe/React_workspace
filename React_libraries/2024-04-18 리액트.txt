@@ -1,0 +1,25 @@
+2024-04-18 리액트
+
+http://localhost:3000/router/page1/qwezsc
+
+스프링 : "/router/page1/{value}"
+리액트 : "/router/page1/:value"
+
+http://localhost:3000/router/page2?time=1031
+
+zustand / react-router / axios
+
+axios : HTTP 통신 처리 수월하게 하는 라이브러리
+react-cookie : React 에서 쿠키관리를 수월하게 하는 라이브러리
+
+// 빌드 로그 기록을 새로짜고 다시 빌드를 생성 
+ -> 컴퓨터는 대소문자를 구분하지 못하므로 만약 패키지의 이름을 대문자에서 소문자로 바꿨을 때 
+./gradlew clean build
+
+http://localhost:3000/axios
+
+http://localhost:4100/api/v1/user/email@email.com
+
+http://localhost:4100/api/v1/user/nickname
+
+http://localhost:4100/cookie
